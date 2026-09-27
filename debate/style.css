@@ -1,0 +1,42 @@
+/* Debate & teaching résumé — one page, oxblood accent. */
+
+:root {
+	--accent: #6e2b2b;
+}
+
+/* Year-by-year results under a single tournament. */
+.results {
+	display: grid;
+	grid-template-columns: 10mm 1fr;
+	row-gap: 0.4mm;
+	margin-top: 1mm;
+	color: var(--ink-2);
+}
+
+.results dt {
+	font-weight: 600;
+	color: var(--accent);
+	font-variant-numeric: tabular-nums lining-nums;
+}
+
+.entries > .prose {
+	margin-top: -0.6mm;
+	font-style: italic;
+}
+
+/* Two short sections side by side. */
+.pair {
+	grid-template-columns: 1.3fr 1fr;
+	align-items: start;
+}
+
+.cite {
+	margin-top: 1.4mm;
+}
+.note {
+	margin-top: 1.4mm;
+}
+
+.talks {
+	row-gap: 0.8mm;
+}

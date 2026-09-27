@@ -1,152 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Elvis Dragon Mao — Resume</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap">
-<link rel="stylesheet" href="resume.css">
-</head>
-<body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Elvis Dragon Mao — Résumés</title>
+		<meta name="description" content="Résumés of Elvis Dragon Mao: technical, academic research, and debate &amp; teaching." />
+		<link rel="stylesheet" href="global.css" />
+		<style>
+			:root {
+				--ink: #16202a;
+				--ink-2: #3c4854;
+				--muted: #6b7682;
+				--hair: #cfd4da;
+				--desk: #e4e2dd;
+			}
 
-<div class="sheet">
+			html {
+				background: var(--desk);
+			}
 
-  <!-- ── Header ─────────────────────────────────────────────── -->
-  <header class="hd">
-    <div class="avatar" role="img" aria-label="Elvis Dragon Mao"></div>
+			body {
+				min-height: 100vh;
+				display: grid;
+				place-items: center;
+				padding: 16mm 16px;
+				color: var(--ink);
+				-webkit-font-smoothing: antialiased;
+			}
 
-    <div class="ident">
-      <h1 class="name">Elvis Dragon Mao</h1>
-      <p class="tagline">Web Development, Interactive Systems, Design</p>
-      <hr class="rule">
-      <ul class="contact">
-        <li>
-          <svg class="ic ic-globe" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 5.5C10.5 8.26142 8.26142 10.5 5.5 10.5M10.5 5.5C10.5 2.73858 8.26142 0.5 5.5 0.5M10.5 5.5H0.5M5.5 10.5C2.73858 10.5 0.5 8.26142 0.5 5.5M5.5 10.5C4.21612 9.15192 3.5 7.36163 3.5 5.5C3.5 3.63837 4.21612 1.84808 5.5 0.5M5.5 10.5C6.78388 9.15192 7.5 7.36163 7.5 5.5C7.5 3.63837 6.78388 1.84808 5.5 0.5M0.5 5.5C0.5 2.73858 2.73858 0.5 5.5 0.5" stroke="#4F6373" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <a href="https://elvismao.com/">elvismao.com</a>
-        </li>
-        <li>
-          <svg class="ic ic-mail" viewBox="0 0 11.0001 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5001 2L6.00456 4.8635C5.85201 4.95211 5.67873 4.99878 5.50231 4.99878C5.32589 4.99878 5.15262 4.95211 5.00006 4.8635L0.500063 2M1.50006 0.5H9.50006C10.0523 0.5 10.5001 0.947715 10.5001 1.5V7.5C10.5001 8.05228 10.0523 8.5 9.50006 8.5H1.50006C0.947778 8.5 0.500063 8.05228 0.500063 7.5V1.5C0.500063 0.947715 0.947778 0.5 1.50006 0.5Z" stroke="#4F6373" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <a href="mailto:info@elvismao.com">info@elvismao.com</a>
-        </li>
-        <li>
-          <svg class="ic ic-github" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 0C2.2375 0 0 2.29559 0 5.12695C0 7.39263 1.4325 9.31396 3.41875 9.99114C3.66875 10.0394 3.76042 9.88091 3.76042 9.74462C3.76042 9.62286 3.75625 9.30029 3.75417 8.87304C2.36333 9.18237 2.07 8.18517 2.07 8.18517C1.8425 7.59344 1.51375 7.43536 1.51375 7.43536C1.06083 7.11749 1.54875 7.1239 1.54875 7.1239C2.05083 7.15978 2.31458 7.65197 2.31458 7.65197C2.76042 8.43597 3.485 8.20953 3.77083 8.07836C3.81583 7.74682 3.94458 7.52081 4.0875 7.39263C2.97708 7.26446 1.81 6.82354 1.81 4.85907C1.81 4.29937 2.00375 3.84222 2.32458 3.48333C2.26833 3.35388 2.09958 2.83264 2.36833 2.1264C2.36833 2.1264 2.78708 1.98883 3.74333 2.65191C4.14333 2.53784 4.56833 2.48144 4.99333 2.47888C5.41833 2.48144 5.84333 2.53784 6.24333 2.65191C7.19333 1.98883 7.61208 2.1264 7.61208 2.1264C7.88083 2.83264 7.71208 3.35388 7.66208 3.48333C7.98083 3.84222 8.17458 4.29937 8.17458 4.85907C8.17458 6.82867 7.00583 7.26232 5.89333 7.38836C6.06833 7.54217 6.23083 7.85662 6.23083 8.33685C6.23083 9.023 6.22458 9.57415 6.22458 9.74078C6.22458 9.87536 6.31208 10.0356 6.56833 9.98431C8.56875 9.31182 10 7.38922 10 5.12695C10 2.29559 7.76125 0 5 0Z" fill="#4F6373"/></svg>
-          <a href="https://github.com/elvisdragonmao">elvisdragonmao</a>
-        </li>
-      </ul>
-    </div>
-  </header>
+			main {
+				width: 100%;
+				max-width: 150mm;
+			}
 
-  <!-- ── Body ───────────────────────────────────────────────── -->
-  <main class="doc">
+			.band {
+				width: 14mm;
+				height: 0.9mm;
+				margin-bottom: 6mm;
+				background: var(--ink);
+			}
 
-    <section class="sec">
-      <h2 class="sh"><span class="sh-bar"></span>Summary</h2>
-      <p class="body body--summary">Computer Science student at National Yang Ming Chiao Tung University with over 10 years of web development experience. Experienced in full-stack web development spanning UI/UX design, human-computer interaction, performance optimization, security, DevOps, and Public Forum Debate. Particularly interested in interactive systems and emerging human-computer interaction technologies, including software, embedded and wearable devices.</p>
-    </section>
+			h1 {
+				font-size: 11mm;
+				font-weight: 400;
+				line-height: 1.05;
+				letter-spacing: -0.012em;
+			}
 
-    <section class="sec">
-      <h2 class="sh"><span class="sh-bar"></span>Education</h2>
-      <p class="body body--edu">National Yang Ming Chiao Tung University — B.S. in Computer Science (expected 2029)</p>
-    </section>
+			.tagline {
+				margin-top: 3mm;
+				font-size: 4mm;
+				font-style: italic;
+				color: var(--ink-2);
+			}
 
-    <section class="sec">
-      <h2 class="sh"><span class="sh-bar"></span>Selected Projects</h2>
-      <div class="body projects">
+			ol {
+				list-style: none;
+				margin-top: 10mm;
+				border-top: 0.25mm solid var(--ink);
+			}
 
-        <article class="proj">
-          <div class="proj-head">
-            <h3 class="proj-title">Food Explorer — Large-Scale “Personality Test” Social Experiment</h3>
-            <span class="tag">
-              <svg class="ic ic-gh9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 0C2.01375 0 0 2.06603 0 4.61425C0 6.65337 1.28925 8.38256 3.07687 8.99203C3.30187 9.03548 3.38437 8.89282 3.38437 8.77016C3.38437 8.66057 3.38063 8.37026 3.37875 7.98574C2.127 8.26413 1.863 7.36666 1.863 7.36666C1.65825 6.83409 1.36237 6.69182 1.36237 6.69182C0.95475 6.40574 1.39388 6.41151 1.39388 6.41151C1.84575 6.44381 2.08312 6.88677 2.08312 6.88677C2.48437 7.59237 3.1365 7.38857 3.39375 7.27053C3.43425 6.97214 3.55013 6.76873 3.67875 6.65337C2.67938 6.53801 1.629 6.14119 1.629 4.37316C1.629 3.86944 1.80338 3.458 2.09212 3.135C2.0415 3.01849 1.88963 2.54938 2.1315 1.91376C2.1315 1.91376 2.50838 1.78995 3.369 2.38672C3.729 2.28406 4.1115 2.2333 4.494 2.23099C4.8765 2.2333 5.259 2.28406 5.619 2.38672C6.474 1.78995 6.85087 1.91376 6.85087 1.91376C7.09275 2.54938 6.94087 3.01849 6.89587 3.135C7.18275 3.458 7.35712 3.86944 7.35712 4.37316C7.35712 6.1458 6.30525 6.53609 5.304 6.64952C5.4615 6.78795 5.60775 7.07096 5.60775 7.50316C5.60775 8.1207 5.60213 8.61674 5.60213 8.7667C5.60213 8.88782 5.68087 9.03202 5.9115 8.98588C7.71188 8.38064 9 6.65029 9 4.61425C9 2.06603 6.98512 0 4.5 0Z" fill="#4F6373"/></svg>
-              <a href="https://github.com/elvisdragonmao/food-personality">GitHub</a>
-            </span>
-            <span class="tag">
-              <svg class="ic ic-yt" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.79083 1.09326C9.73434 0.881841 9.62293 0.68888 9.46775 0.533699C9.31258 0.378518 9.11909 0.266564 8.90667 0.209048C8.12708 4.93474e-08 5 0 5 0C5 0 1.87292 4.93474e-08 1.09292 0.209048C0.880587 0.266665 0.687206 0.37866 0.532116 0.53383C0.377026 0.689001 0.265663 0.881909 0.209167 1.09326C0 1.87315 0 3.5 0 3.5C0 3.5 0 5.12685 0.209167 5.90674C0.265661 6.11816 0.377073 6.31112 0.532246 6.4663C0.68742 6.62148 0.880907 6.73344 1.09333 6.79095C1.87292 7 5 7 5 7C5 7 8.12708 7 8.90708 6.79095C9.11953 6.73348 9.31304 6.62153 9.46822 6.46635C9.6234 6.31116 9.73479 6.11818 9.79125 5.90674C10 5.12685 10 3.5 10 3.5C10 3.5 10 1.87315 9.79083 1.09326ZM3.97708 4.977V2.023L6.59083 3.5L3.97708 4.977Z" fill="#4F6373"/></svg>
-              <a href="https://www.youtube.com/watch?v=WbUWv8FEPLA">YouTube</a>
-            </span>
-          </div>
-          <div class="proj-desc">
-            <p>People trust personality quizzes despite weak scientific validity. We built a quiz where results are randomized by design but framed as highly personalized; collected large-scale user feedback.</p>
-            <p><b>Impact: </b>100,000+ responses in 1 week; 90%+ rated “accurate” (10/10); covered by LINE Today / VS MEDIA / niusnews; YouTube coverage 68K+ views.</p>
-          </div>
-        </article>
+			li {
+				border-bottom: 0.2mm solid var(--hair);
+			}
 
-        <article class="proj">
-          <div class="proj-head">
-            <h3 class="proj-title">emtech — Community Learning Platform &amp; Custom Blog Engine</h3>
-            <span class="tag">
-              <svg class="ic ic-gh9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 0C2.01375 0 0 2.06603 0 4.61425C0 6.65337 1.28925 8.38256 3.07687 8.99203C3.30187 9.03548 3.38437 8.89282 3.38437 8.77016C3.38437 8.66057 3.38063 8.37026 3.37875 7.98574C2.127 8.26413 1.863 7.36666 1.863 7.36666C1.65825 6.83409 1.36237 6.69182 1.36237 6.69182C0.95475 6.40574 1.39388 6.41151 1.39388 6.41151C1.84575 6.44381 2.08312 6.88677 2.08312 6.88677C2.48437 7.59237 3.1365 7.38857 3.39375 7.27053C3.43425 6.97214 3.55013 6.76873 3.67875 6.65337C2.67938 6.53801 1.629 6.14119 1.629 4.37316C1.629 3.86944 1.80338 3.458 2.09212 3.135C2.0415 3.01849 1.88963 2.54938 2.1315 1.91376C2.1315 1.91376 2.50838 1.78995 3.369 2.38672C3.729 2.28406 4.1115 2.2333 4.494 2.23099C4.8765 2.2333 5.259 2.28406 5.619 2.38672C6.474 1.78995 6.85087 1.91376 6.85087 1.91376C7.09275 2.54938 6.94087 3.01849 6.89587 3.135C7.18275 3.458 7.35712 3.86944 7.35712 4.37316C7.35712 6.1458 6.30525 6.53609 5.304 6.64952C5.4615 6.78795 5.60775 7.07096 5.60775 7.50316C5.60775 8.1207 5.60213 8.61674 5.60213 8.7667C5.60213 8.88782 5.68087 9.03202 5.9115 8.98588C7.71188 8.38064 9 6.65029 9 4.61425C9 2.06603 6.98512 0 4.5 0Z" fill="#4F6373"/></svg>
-              <a href="https://github.com/elvisdragonmao/emtech">GitHub</a>
-            </span>
-            <span class="tag">
-              <svg class="ic ic-site" viewBox="0 0 8.8 8.8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.4 4.4C8.4 6.60914 6.60914 8.4 4.4 8.4M8.4 4.4C8.4 2.19086 6.60914 0.4 4.4 0.4M8.4 4.4H0.4M4.4 8.4C2.19086 8.4 0.4 6.60914 0.4 4.4M4.4 8.4C3.37289 7.32154 2.8 5.8893 2.8 4.4C2.8 2.9107 3.37289 1.47846 4.4 0.4M4.4 8.4C5.42711 7.32154 6 5.8893 6 4.4C6 2.9107 5.42711 1.47846 4.4 0.4M0.4 4.4C0.4 2.19086 2.19086 0.4 4.4 0.4" stroke="#4F6373" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <a href="https://emtech.cc/">Website</a>
-            </span>
-          </div>
-          <div class="proj-desc">
-            <p>Built and maintained a blog for 5 years to explain complex tools/concepts in an accessible, beginner-friendly way to face the lack of accessible Chinese technical learning resources; learners struggle alone. Engineered a custom generator (emblog) for performance, SEO, and security with SPA-like UX.</p>
-            <p><b>Impact: </b>1.6M+ Chinese characters of original content, tens of thousands monthly visits, sustained user support via reader emails and donation.</p>
-          </div>
-        </article>
+			a {
+				display: grid;
+				grid-template-columns: 9mm 1fr auto;
+				align-items: baseline;
+				column-gap: 4mm;
+				padding: 5mm 0;
+				color: inherit;
+				text-decoration: none;
+			}
 
-        <article class="proj">
-          <div class="proj-head">
-            <h3 class="proj-title">emfont — Lightweight Open-Source CJK Webfont Service</h3>
-            <span class="tag">
-              <svg class="ic ic-gh9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 0C2.01375 0 0 2.06603 0 4.61425C0 6.65337 1.28925 8.38256 3.07687 8.99203C3.30187 9.03548 3.38437 8.89282 3.38437 8.77016C3.38437 8.66057 3.38063 8.37026 3.37875 7.98574C2.127 8.26413 1.863 7.36666 1.863 7.36666C1.65825 6.83409 1.36237 6.69182 1.36237 6.69182C0.95475 6.40574 1.39388 6.41151 1.39388 6.41151C1.84575 6.44381 2.08312 6.88677 2.08312 6.88677C2.48437 7.59237 3.1365 7.38857 3.39375 7.27053C3.43425 6.97214 3.55013 6.76873 3.67875 6.65337C2.67938 6.53801 1.629 6.14119 1.629 4.37316C1.629 3.86944 1.80338 3.458 2.09212 3.135C2.0415 3.01849 1.88963 2.54938 2.1315 1.91376C2.1315 1.91376 2.50838 1.78995 3.369 2.38672C3.729 2.28406 4.1115 2.2333 4.494 2.23099C4.8765 2.2333 5.259 2.28406 5.619 2.38672C6.474 1.78995 6.85087 1.91376 6.85087 1.91376C7.09275 2.54938 6.94087 3.01849 6.89587 3.135C7.18275 3.458 7.35712 3.86944 7.35712 4.37316C7.35712 6.1458 6.30525 6.53609 5.304 6.64952C5.4615 6.78795 5.60775 7.07096 5.60775 7.50316C5.60775 8.1207 5.60213 8.61674 5.60213 8.7667C5.60213 8.88782 5.68087 9.03202 5.9115 8.98588C7.71188 8.38064 9 6.65029 9 4.61425C9 2.06603 6.98512 0 4.5 0Z" fill="#4F6373"/></svg>
-              <a href="https://github.com/emfont/emfont">GitHub</a>
-            </span>
-            <span class="tag">
-              <svg class="ic ic-site" viewBox="0 0 8.8 8.8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.4 4.4C8.4 6.60914 6.60914 8.4 4.4 8.4M8.4 4.4C8.4 2.19086 6.60914 0.4 4.4 0.4M8.4 4.4H0.4M4.4 8.4C2.19086 8.4 0.4 6.60914 0.4 4.4M4.4 8.4C3.37289 7.32154 2.8 5.8893 2.8 4.4C2.8 2.9107 3.37289 1.47846 4.4 0.4M4.4 8.4C5.42711 7.32154 6 5.8893 6 4.4C6 2.9107 5.42711 1.47846 4.4 0.4M0.4 4.4C0.4 2.19086 2.19086 0.4 4.4 0.4" stroke="#4F6373" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <a href="https://font.emtech.cc/">Website</a>
-            </span>
-          </div>
-          <div class="proj-desc">
-            <p>High-quality CJK typography is hard to adopt due to large amount of character, file size, and licensing anxiety. So I built a free webfont service optimized for speed and stability.</p>
-            <p><b>Impact: </b>130+ CJK fonts, aggressive subsetting (~40KB / 100 chars), with 100k+ requests per month.</p>
-          </div>
-        </article>
+			.no {
+				font-size: 3.4mm;
+				color: var(--accent);
+				font-variant-numeric: tabular-nums lining-nums;
+			}
 
-      </div>
-    </section>
+			.title {
+				font-size: 5.4mm;
+				line-height: 1.2;
+				transition: color 0.2s;
+			}
 
-    <section class="sec">
-      <h2 class="sh"><span class="sh-bar"></span>Experience &amp; Leadership</h2>
-      <ul class="body bullets">
-        <li>Awwwards — Young Jury (World Largest Web Design Competition) · 2024~2026</li>
-        <li>NYCU Software Development Club — Frontend Host, Design Team Host · 2025~2026</li>
-        <li>NYCU BambooFox Cyber Security Club / Team — Sysadmin · 2025~2026</li>
-        <li>SITCON 2026 / SITCON Camp 2025 — Development Team Lead</li>
-        <li>Frequent speaker/instructor (SITCON 2024-2025 / COSCUP 2024 / 30+ Workshops)</li>
-      </ul>
-    </section>
+			.desc {
+				grid-column: 2;
+				margin-top: 1.2mm;
+				font-size: 3.5mm;
+				line-height: 1.45;
+				color: var(--muted);
+			}
 
-    <section class="sec">
-      <h2 class="sh"><span class="sh-bar"></span>Honors &amp; Certificates</h2>
-      <div class="body honors">
-        <p>HITCON 2025 — Champion · Awwwards — Honorable Mention · SITCON Hackathon 2024 — Best Technical Award · CSSREELS Featured of the Day (2×) · Taichung City Outstanding Youth 2024 · 2024 National High School English Public Forum Debate - Judge's Choice Awards, Honorable Mentioned Debater</p>
-        <p>Google UX Design Professional Certificate · 2nd Grade Amateur Radio Operator's Certificate</p>
-      </div>
-    </section>
+			.pages {
+				grid-row: 1;
+				grid-column: 3;
+				font-size: 3.2mm;
+				font-style: italic;
+				color: var(--muted);
+				white-space: nowrap;
+			}
 
-    <section class="sec">
-      <h2 class="sh"><span class="sh-bar"></span>Skills</h2>
-      <dl class="body skills">
-        <dt>Web Development</dt>
-        <dd>JavaScript/TypeScript, HTML/CSS, React, Node.js, Express/Fastify, Zed, Redis, Git, Nginx/Caddy, K8s, performance profiling, animation-heavy UI</dd>
-        <dt>Systems/Data</dt>
-        <dd>Python, Tensorflow, PostgreSQL, MongoDB, OpentElemetry, Grafana</dd>
-        <dt>Design</dt>
-        <dd>Figma, Adobe Ps/Ai/Ae · interaction/motion, illustration, UI/UX Design</dd>
-        <dt>English</dt>
-        <dd>TOEIC Golden Certificate (2024), NSDA Taiwan Team WSD Debater</dd>
-      </dl>
-    </section>
+			.arrow {
+				display: inline-block;
+				margin-left: 2mm;
+				color: var(--accent);
+				opacity: 0;
+				transform: translateX(-1.5mm);
+				transition:
+					opacity 0.2s,
+					transform 0.2s;
+			}
 
-  </main>
-</div>
+			a:hover .title,
+			a:focus-visible .title {
+				color: var(--accent);
+			}
 
-</body>
+			a:hover .arrow,
+			a:focus-visible .arrow {
+				opacity: 1;
+				transform: none;
+			}
+
+			a:focus-visible {
+				outline: 0.4mm solid var(--accent);
+				outline-offset: 1mm;
+			}
+
+			footer {
+				margin-top: 8mm;
+				font-size: 3.4mm;
+				color: var(--muted);
+			}
+
+			footer a {
+				display: inline;
+				padding: 0;
+				color: var(--ink-2);
+			}
+
+			footer a:hover {
+				color: var(--ink);
+				text-decoration: underline;
+				text-underline-offset: 0.8mm;
+			}
+
+			@media (max-width: 520px) {
+				a {
+					grid-template-columns: 7mm 1fr;
+				}
+				.pages {
+					grid-row: auto;
+					grid-column: 2;
+					margin-top: 1mm;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="band"></div>
+			<h1>Elvis Dragon Mao</h1>
+			<p class="tagline">Résumés</p>
+
+			<ol>
+				<li style="--accent: #1d3d5e">
+					<a href="tech/" target="_blank" rel="noopener">
+						<span class="no">01</span>
+						<span class="title">
+							Technical Résumé
+							<span class="arrow" aria-hidden="true">→</span>
+						</span>
+						<span class="pages">1 page</span>
+						<span class="desc">Software engineering, interactive systems, web &amp; creative technology.</span>
+					</a>
+				</li>
+				<li style="--accent: #2c4a3e">
+					<a href="research/" target="_blank" rel="noopener">
+						<span class="no">02</span>
+						<span class="title">
+							Academic / Research CV
+							<span class="arrow" aria-hidden="true">→</span>
+						</span>
+						<span class="pages">2 pages</span>
+						<span class="desc">Human–AI interaction research, teaching, talks, and service.</span>
+					</a>
+				</li>
+				<li style="--accent: #6e2b2b">
+					<a href="debate/" target="_blank" rel="noopener">
+						<span class="no">03</span>
+						<span class="title">
+							Debate &amp; Teaching Résumé
+							<span class="arrow" aria-hidden="true">→</span>
+						</span>
+						<span class="pages">1 page</span>
+						<span class="desc">English debate instruction, adjudication, and competitive debate.</span>
+					</a>
+				</li>
+			</ol>
+
+			<footer>
+				<a href="https://elvismao.com/" target="_blank" rel="noopener">elvismao.com</a>
+				·
+				<a href="mailto:info@elvismao.com" target="_blank" rel="noopener">info@elvismao.com</a>
+			</footer>
+		</main>
+	</body>
 </html>

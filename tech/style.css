@@ -1,0 +1,11 @@
+/* Technical résumé — one page, navy accent. */
+
+:root {
+	--accent: #1d3d5e;
+}
+
+/* Honours run in two columns to keep the page to a single sheet. */
+.ledger.cols {
+	grid-template-columns: 1fr auto 1fr auto;
+	column-gap: 5mm;
+}

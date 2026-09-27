@@ -1,0 +1,78 @@
+/* Academic CV — two pages, deep green accent. */
+
+:root {
+	--accent: #2c4a3e;
+}
+
+/* A second, unaffiliated research block sits below the lab. */
+.entry.independent {
+	margin-top: 2.6mm;
+}
+
+/* Course facts as a quiet dotted run. */
+.facts {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 0.6mm;
+	font-size: 2.9mm;
+	font-weight: 500;
+	color: var(--accent);
+}
+
+.facts span + span::before {
+	content: "·";
+	margin: 0 1.8mm;
+	color: var(--muted);
+}
+
+.note {
+	margin-top: 1.6mm;
+}
+
+/* Leadership entries flow down two balanced columns on page 2. */
+.entries.flow2 {
+	display: block;
+	columns: 2;
+	column-gap: 8mm;
+}
+
+.entries.flow2 > .entry {
+	break-inside: avoid;
+	margin-bottom: 2.5mm;
+}
+
+/* Research interests as a single dotted line. */
+.interests {
+	display: flex;
+	list-style: none;
+	font-size: 2.9mm;
+	font-style: italic;
+	white-space: nowrap;
+	color: var(--ink);
+}
+
+.interests li + li::before {
+	content: "·";
+	margin: 0 1.3mm;
+	font-style: normal;
+	color: var(--accent);
+}
+
+.skills {
+	grid-template-columns: 42mm 1fr;
+}
+
+/* A slightly tighter leading keeps the full CV to two sheets. */
+.sheet {
+	font-size: 2.92mm;
+	line-height: 1.27;
+}
+.sheet > main {
+	gap: 2.8mm;
+}
+
+.entries.cols-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0 6mm;
+}
