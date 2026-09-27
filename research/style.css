@@ -76,3 +76,14 @@
 	grid-template-columns: repeat(3, 1fr);
 	gap: 0 6mm;
 }
+
+/* Honours read one year per row; a year's items share that row in two columns. */
+.years.by-year > ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 6mm;
+	row-gap: 0.5mm;
+}
+.years.by-year > ul li + li {
+	margin-top: 0;
+}

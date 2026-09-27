@@ -494,9 +494,6 @@ ul.dash li::before {
 .cite .me {
 	font-weight: 600;
 	color: var(--ink);
-	text-decoration: underline;
-	text-decoration-thickness: 0.15mm;
-	text-underline-offset: 0.6mm;
 }
 
 /* ── Talks ────────────────────────────────────────────────────────── */
