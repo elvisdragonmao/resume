@@ -163,7 +163,7 @@ Poster accepted at **TAICHI 2026**.
 
 **Course Designer & Lead Instructor — Introduction to React Frontend Development**  
 National Yang Ming Chiao Tung University · Spring 2026  
-**2-credit micro-course · 12 sessions · 36 hours · ~35 students**  
+**2-credit course · 12 sessions · 36 hours · ~35 students**  
 Instructor of record: Prof. Meng-Hsun Tsai
 
 - Designed the complete curriculum and delivered the course instruction.
