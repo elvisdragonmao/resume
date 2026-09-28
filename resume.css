@@ -1,9 +1,9 @@
 /* =====================================================================
    Elvis Dragon Mao — shared résumé system
    ---------------------------------------------------------------------
-   Loaded after global.css by every résumé in tech/, research/ and
-   debate/. Each of those folders adds a small style.css that only sets
-   the accent colour and any layout specific to its own narrative.
+   Loaded by every résumé in tech/, research/ and debate/. Each of
+   those folders adds a small style.css that only sets the accent
+   colour and any layout specific to its own narrative.
 
    Layout is measured in millimetres and type in points, so the screen
    preview and the printed A4 page are dimensionally identical. Every
@@ -34,6 +34,9 @@
 
 html {
 	background: var(--desk);
+	/* Keep iOS from inflating the zoomed-down sheet's small type. */
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 }
 
 body {
